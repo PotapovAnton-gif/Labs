@@ -1,22 +1,18 @@
 import matplotlib
-import numpy as np
 import matplotlib.pyplot as plt
 import random
 
-x = []
-y = []
+x = [0, 100, 0]
+y = [0, 0, 100]
 
-for i in range(3):
-    x.append(random.randint(0, 10))
-    y.append(random.randint(0, 10))
 
-plt.scatter(x, y, s=1)
+plt.plot(x, y, ',')
 
-curr_point = [random.randint(0,10), random.randint(0,10)]
+curr_point = [random.randint(0,100), random.randint(0,100)]
 
-for i in range(2000):
+for i in range(100000):
     j = random.randint(0,2)
-    plt.scatter(curr_point[0], curr_point[1], s=1)
+    plt.plot(curr_point[0], curr_point[1], ',')
     curr_point[0] = (curr_point[0] + x[j])/2
     curr_point[1] = (curr_point[1] + y[j])/2
 
